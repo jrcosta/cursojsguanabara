@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ex002</title>
+    <title>Ex003</title>
     <style>
         body {
             background-color: rgb(120, 184, 184);
@@ -27,14 +27,18 @@
 </head>
 <body>
     <h1>
-        Aula 2 <!--Comentario HTML-->
+        Aula 3 <!--Comentario HTML-->
     </h1>
     <p>
         Curso JS
     </p>
     <script>
-        var nome = window.prompt("Qual seu nome?")
-        document.write(`Seu nome tem ${nome.length} letras`)
+        /*var nome = window.prompt("Qual seu nome?")
+        document.write(`Seu nome tem ${nome.length} letras`)*/
+        n1 = Number(window.prompt("Digite o valor da 1º conta:"))
+        n2 = Number(window.prompt("Digite o valor da 2º Conta:"))
+        total = n1 + n2
+        document.write(`A 1º conta de ${n1.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})} somada a 2º conta ${n2.toLocaleString('pt-BR', {style: 'currency',currency: 'BRL'})} da um total de: ${total.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}`)
     </script>
 </body>
 </html>
