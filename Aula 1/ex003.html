@@ -8,6 +8,7 @@
     <style>
         body {
             background-color: rgb(120, 184, 184);
+            font: normal 20pt Arial;
         }
 
         h1 {
@@ -32,12 +33,8 @@
         Curso JS
     </p>
     <script>
-        var n1 = window.prompt("Digite um número: ")
-        var n2 = window.prompt("Digite outro número: ")
-        /*var soma = Number.parseInt(n1) + Number.parseInt(n2)*/ 
-        var soma = Number(n1) + Number(n2)
-        /*window.alert("A soma é: " + soma)*/
-        window.alert(`A soma entre ${n1} e ${n2} é igual a ${soma}`)//Template String utilizando ` crase
+        var nome = window.prompt("Qual seu nome?")
+        document.write(`Seu nome tem ${nome.length} letras`)
     </script>
 </body>
 </html>
