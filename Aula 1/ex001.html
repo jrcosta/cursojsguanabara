@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Teste</title>
+    <style>
+        body {
+            background-color: rgb(120, 184, 184);
+        }
+
+        h1 {
+            font-style: initial;
+            color: rgb(228, 33, 43);
+            font-size: 25pt;
+            text-align: center;
+        }
+
+        p {
+            font-size: 15pt;
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1>
+        Titulo Teste
+    </h1>
+    <p>
+        Teste Texto!
+    </p>
+    <script>
+        /*window.alert("Olá Mundo")
+        window.confirm("Não")*/
+        diaNascimento = window.prompt("Qual o Dia do seu nascimento? Ex: DD")
+        mesNascimento = window.prompt("Qual o mês do seu Nascimento? Ex: MM")
+        anoNascimento = window.prompt("Qual o ano do seu nascimento? Ex: AAAA")
+
+        if(anoNascimento >= 2021) {
+            window.alert("Você não nasceu ainda? digite novamente!")
+            anoNascimento = window.prompt("Qual o ano do seu nascimento?")
+        }
+        
+        else if (anoNascimento < 1821) {
+            window.alert("Você é um vampiro? ou um viajante do tempo?")
+            anoNascimento = window.prompt("Qual o ano do seu nascimento?")
+        } 
+
+        var mesPrint;
+
+        switch (mesNascimento){
+            case '01':
+                mesPrint = "Janeiro"
+            break;
+            case '02':
+                mesPrint = "Fevereiro"
+            break;
+            case '03':
+                mesPrint = "Março"
+            break;
+            case '04':
+                mesPrint = "Abril"
+            break;
+            case '05':
+                mesPrint = "Maio"
+            break;
+            case '06':
+                mesPrint = "Junho"
+            break;
+            case '07':
+                mesPrint = "Julho"
+            break;
+            case '08':
+                mesPrint = "Agosto"
+            break;
+            case '09':
+                mesPrint = "Setembro"
+            break;
+            case '10':
+                mesPrint = "Outubro"
+            break;
+            case '11':
+                mesPrint = "Novembro"
+            break;
+            case '12':
+                mesPrint = 'Dezembro'
+            break;
+        }
+
+        window.alert("Você nasceu no dia " + diaNascimento + " de " + mesPrint + " de " + anoNascimento )
+    </script>
+</body>
+</html>
