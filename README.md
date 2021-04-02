@@ -2,4 +2,4 @@
 
 Armazenar Exercícios do curso de JS do Gustavo Guanabara.
 
-- [Link do Curso] (https://www.cursoemvideo.com/course/javascript/)
+- [Link do Curso](https://www.cursoemvideo.com/course/javascript/)
