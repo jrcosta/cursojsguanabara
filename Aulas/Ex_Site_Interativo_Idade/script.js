@@ -1,17 +1,19 @@
-function carregar() {
-    var msg = window.document.getElementById('msg')
-    var img = window.document.getElementById('imagem')
+function verificar() {
     var data = new Date()
-    var hora = data.getHours()
-    msg.innerHTML = `Agora são ${hora} horas.`
-    if(hora >= 0 && hora < 12){
-        img.src = 'fotomanha.png'
-        document.body.style.background = '#9c9276'
-    } else if(hora >= 12 && hora < 18){
-        img.src = 'fototarde.png'
-        document.body.style.background = '#afb1bd'
-    } else {
-        img.src = 'fotonoite.png'
-        document.body.style.background = '#392943'
+    var ano = data.getFullYear()
+    var fano = document.getElementById('txtano')
+    var res = document.getElementById('res')
+    if(fano.value.length == 0){
+        window.alert(`Digite o ano de Nascimento!`)
+    } else if(Number(fano.value) > ano) {
+        window.alert(`Ainda não Nasceu!`)
+    }  else if(Number(fano.value) < 0) {
+        window.alert(`Ano inválido!`)
     }
+    else {
+        var fsex = document.getElementsByName('radsex')
+        var idade = ano - Number(fano.value)
+        res.innerHTML = `Idade Calculada: ${idade}`
+    }
+    res.innerHTML += `<p>Ano Digitado ${fano.value}</p>`
 }
