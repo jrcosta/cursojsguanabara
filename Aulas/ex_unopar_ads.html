@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina com Imagem e CSS</title>
+    <style>
+        body {
+            font: bold 50px Arial;
+            background-color:gray;
+            color: rgb(72, 72, 204);
+            text-align: center;
+        }
+        img {
+            size: 50px 50px;
+        }
+        section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.363);;
+        }
+        p{
+            font:color blue 50px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <img src="data:image/png;base64,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" alt="Logo Unopar">
+    </section>
+    <p>
+        Imagem Logo Unopar.
+    </p>
+</body>
+</html>
