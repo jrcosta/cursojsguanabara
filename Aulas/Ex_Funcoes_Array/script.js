@@ -1,35 +1,39 @@
-var n = []
-//var rodou = 0
-var dados = document.getElementById('dados')
+let valores = []
+let lista = 0
+let temItens = 0
+let dados = document.getElementById('dados')
+let tab = document.getElementById('seltab')
+let num = document.getElementById('txtn')
 
 function listaNumeros() {
-    let num = document.getElementById('txtn')
-    let tab = document.getElementById('seltab')
-
     if (num.value.length == 0) {
         window.alert('Por favor, Digite um número!')
-    } else if(num.value > 100 || num.value < 0 || n.indexOf(num.value) == Number(num.value)){
+    } else if(num.value > 100 || num.value < 0 || valores.indexOf(Number(num.value)) > -1){
         window.alert('Número inválido, por favor escolha outro')
-    /*} else if(rodou > 0){
-        dados.innerHTML.replace*/
+    } else if(temItens > 0){
+        dados.innerHTML = ''
     } else {
-        n.push(Number(num.value))
-        let c = 1
+        valores.push(Number(num.value))
         let item = document.createElement('option')
         item.text = `Adicionado Valor ${num.value}`
-        item.value = `tab${c}`
         tab.appendChild(item)
         num.value = ''
+        num.focus()
+        lista = 1
     }
 } 
 
 function avalN() {
+    if (valores.length == 0){
+        window.alert('Adicione valores antes de finalizar.')
+    } else {
     const somar = (accumulator, currentValue) => accumulator + currentValue;
-    dados.innerHTML += `<p>Ao todo temos ${n.length} números cadastrados.</p>`
-    dados.innerHTML += `<p>O maior número é ${Math.max.apply(null, n)}.</p>`
-    dados.innerHTML += `<p>O menor número é ${Math.min.apply(null, n)}</p>`
-    dados.innerHTML += `<p>Somando todos os valores temos ${n.reduce(somar)}</p>`
-    dados.innerHTML += `<p>A média dos valores digitados é ${Number(n.reduce(somar))/Number(n.length)}</p>`
-    //rodou = 1
+    dados.innerHTML += `<p>Ao todo temos ${valores.length} números cadastrados.</p>`
+    dados.innerHTML += `<p>O maior número é ${Math.max.apply(null, valores)}.</p>`
+    dados.innerHTML += `<p>O menor número é ${Math.min.apply(null, valores)}</p>`
+    dados.innerHTML += `<p>Somando todos os valores temos ${valores.reduce(somar)}</p>`
+    dados.innerHTML += `<p>A média dos valores digitados é ${Number(valores.reduce(somar))/Number(valores.length)}</p>`
+    temItens = 1
+    }
 }
 
